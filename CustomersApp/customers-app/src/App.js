@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
-import { Link, BrowserRouter } from 'react-router-dom';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import HomeContainer from './containers/HomeContainer';
+import CustomersContainer from './containers/CustomersContainer';
 
 class App extends Component {
+
+  renderHome = () => <h1>Home</h1>;
+  renderCustomerContainer = () => <h1>Customers Container</h1>;
+  renderCustomerListContainer = () => <h1>Customers List Container</h1>;
+  renderCustomerNewContainer = () => <h1>Customer New Container</h1>;
+
   render() {
     return (
-      <BrowserRouter>
-        <div className="App">
-          <Link to="/customers">Customers</Link><br />
-          <Link to="/customers/30000000">Customers 30000000</Link>
+      <Router>
+        <div>
+          <Route exact path="/" component={HomeContainer} />
+          <Route exact path="/customers" component={CustomersContainer} />
+          <Switch>
+            <Route path="/customers/new" component={this.renderCustomerNewContainer} />
+            <Route path="/customers/:dni" component={this.renderCustomerContainer} />
+          </Switch>
         </div>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
