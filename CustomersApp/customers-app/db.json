@@ -1,0 +1,36 @@
+{
+    "customers": [
+      {
+          "dni":"54101010",
+          "name":"Bob Esponja",
+          "age":18
+      },
+      {
+          "dni":"64202020",
+          "name":"Calamardo",
+          "age":25
+      },
+      {
+          "dni":"74303030",
+          "name":"Jorge Pig",
+          "age":8
+      }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
