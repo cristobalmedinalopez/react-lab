@@ -4,6 +4,8 @@ import {reduxForm, Field } from 'redux-form';
 import { setPropsAsInitial } from '../helpers/setPropsAsInitial';
 import { Prompt } from 'react-router-dom';
 import CustomerActions from './CustomerActions';
+import { CUSTOMER_EDIT } from '../constants/permissions';
+import { accessControl } from '../helpers/accessControl';
 
 const isNumber = value => (
     isNaN(Number(value)) && "El campo debe ser un número"
@@ -105,4 +107,4 @@ const CustomerEditForm = reduxForm(
         validate
     })(CustomerEdit);
 
-export default setPropsAsInitial(CustomerEditForm);
+export default accessControl([CUSTOMER_EDIT])(setPropsAsInitial(CustomerEditForm));
