@@ -12,6 +12,19 @@
       "name": "JORGE PIG",
       "age": 20,
       "isDeleteAllow": false
+    },
+    {
+      "id": "TAXLPf2",
+      "dni": "54101010",
+      "name": "CRISTÓBAL MEDINA",
+      "age": 30,
+      "user": {
+        "permissions": [
+          "CUSTOMER_LIST",
+          "CUSTOMER_VIEW",
+          "CUSTOMER_EDIT"
+        ]
+      }
     }
   ],
   "posts": [

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-export const accessControl = permissionsRequired => WrappepComponent => {
+export const accessControl = permissionsRequired => WrappedComponent => {
     const SecuredControl = class extends Component {
         render(){
             const { permissions } = this.props.user;
@@ -10,7 +10,7 @@ export const accessControl = permissionsRequired => WrappepComponent => {
             if (!isAllow){
                 return <div><i>No tiene permisos de acceso</i></div>
             }
-            return <WrappepComponent {...this.props} />
+            return <WrappedComponent {...this.props} />
         }
     }
 
