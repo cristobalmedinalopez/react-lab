@@ -1,20 +1,23 @@
 {
-    "customers": [
-      {
-          "dni":"54101010",
-          "name":"Bob Esponja",
-          "age":18
-      },
-      {
-          "dni":"64202020",
-          "name":"Calamardo",
-          "age":25
-      },
-      {
-          "dni":"74303030",
-          "name":"Jorge Pig",
-          "age":8
-      }
+  "customers": [
+    {
+      "id": "54101010",
+      "dni": "54101010",
+      "name": "BOB ESPONJA",
+      "age": 2293
+    },
+    {
+      "id": "64202020",
+      "dni": "64202020",
+      "name": "CALAMARDO",
+      "age": 27
+    },
+    {
+      "id": "74303030",
+      "dni": "74303030",
+      "name": "JORGE PIG",
+      "age": 8
+    }
   ],
   "posts": [
     {
